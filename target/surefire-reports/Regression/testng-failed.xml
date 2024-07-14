@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Regression]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="regression(failed)" verbose="0">
+    <classes>
+      <class name="sleniumframework.tests.EndToEndTest">
+        <methods>
+          <include name="registerPage"/>
+          <include name="tearDown"/>
+          <include name="landingPage"/>
+        </methods>
+      </class> <!-- sleniumframework.tests.EndToEndTest -->
+      <class name="sleniumframework.tests.EndToEndOrderProduct">
+        <methods>
+          <include name="registerWhileCheckout"/>
+          <include name="tearDown"/>
+          <include name="landingPage"/>
+          <include name="validateProductQuantityInCart"/>
+          <include name="validateCartProductAfterLogin"/>
+        </methods>
+      </class> <!-- sleniumframework.tests.EndToEndOrderProduct -->
+    </classes>
+  </test> <!-- regression(failed) -->
+</suite> <!-- Failed suite [Regression] -->

@@ -1,0 +1,13 @@
+sleniumframework\pageobjects\BannerPage.class
+sleniumframework\pageobjects\SidebarPage.class
+sleniumframework\pageobjects\CartPage.class
+sleniumframework\pageobjects\HomeRecommendedItemsPage.class
+seleniumframework\resources\ExtentReporterNG.class
+sleniumframework\pageobjects\ProductDetailsPage.class
+sleniumframework\pageobjects\ContactUsPage.class
+sleniumframework\pageobjects\PaymentPage.class
+sleniumframework\pageobjects\LandingPage.class
+sleniumframework\abstractcomponents\AbstractComponent.class
+sleniumframework\pageobjects\ProductsPage.class
+sleniumframework\pageobjects\SignupLoginPage.class
+sleniumframework\pageobjects\FooterPage.class
