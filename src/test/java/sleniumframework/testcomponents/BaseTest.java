@@ -3,8 +3,6 @@ package sleniumframework.testcomponents;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.HashMap;
@@ -20,11 +18,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -35,113 +30,110 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import sleniumframework.pageobjects.LandingPage;
 
 public class BaseTest {
-	public WebDriver driver;
-	public LandingPage landingPage;
 
-	public WebDriver initializeDriver() throws IOException {
-		Properties properties = new Properties();
-		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")
-				+ "//src//main//java//seleniumframework//resources//GlobalData.properties");
-		properties.load(fis);
-		String browserName = System.getProperty("browser") != null ? System.getProperty("browser")
-				: properties.getProperty("browser");
-		// String browserName = properties.getProperty("browser");			
-		
-		if (browserName.contains("chrome")) {
-			ChromeOptions options = new ChromeOptions();
-			options.addExtensions(new File(System.getProperty("user.dir") + "\\Stands AdBlocker 2.1.20.0.crx"));
-			WebDriverManager.chromedriver().setup();
-			if (browserName.contains("headless")) {
-				options.addArguments("headless");
-			}
-			
-			String downloadPath = System.getProperty("user.dir") + "\\downloads";
-			HashMap<String, Object> chromePrefs = new HashMap<String, Object>();
-			chromePrefs.put("profile.default_content_settings.popups", 0);
-			chromePrefs.put("download.default_directory", downloadPath);
-			options.setExperimentalOption("prefs", chromePrefs);
-			driver = new ChromeDriver(options);
-			driver.manage().window().setSize(new Dimension(1440, 900)); // to run fullscreen
-		}
+    public WebDriver driver;
+    public LandingPage landingPage;
 
-		else if (browserName.equalsIgnoreCase("firefox")) {
-			driver = new FirefoxDriver();
-		}
+    public WebDriver initializeDriver() throws IOException {
+        Properties properties = new Properties();
+        try (FileInputStream fis = new FileInputStream(System.getProperty("user.dir")
+                + "//src//main//java//seleniumframework//resources//GlobalData.properties")) {
+            properties.load(fis);
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new IOException("Failed to load properties file.", e);
+        }
 
-		else if (browserName.equalsIgnoreCase("edge")) {
-			WebDriverManager.edgedriver().setup();
-			driver = new EdgeDriver();
-		}
+        String browserName = System.getProperty("browser") != null ? System.getProperty("browser").trim()
+                : properties.getProperty("browser").trim();
 
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		return driver;
-	}
+        if (browserName.equalsIgnoreCase("chrome")) {
+            ChromeOptions options = new ChromeOptions();
+            options.addExtensions(new File(System.getProperty("user.dir") + "\\Stands AdBlocker 2.1.20.0.crx"));
+            WebDriverManager.chromedriver().setup();
+            if (browserName.contains("headless")) {
+                options.addArguments("--headless");
+            }
 
-//Convert data to HashMap from Json
-	public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException {
-		// read json to string
-		String jsonContent = FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
+            String downloadPath = System.getProperty("user.dir") + "\\downloads";
+            HashMap<String, Object> chromePrefs = new HashMap<>();
+            chromePrefs.put("profile.default_content_settings.popups", 0);
+            chromePrefs.put("download.default_directory", downloadPath);
+            options.setExperimentalOption("prefs", chromePrefs);
 
-		// String to HashMap Jackson Databind
-		ObjectMapper mapper = new ObjectMapper();
-		List<HashMap<String, String>> data = mapper.readValue(jsonContent,
-				new TypeReference<List<HashMap<String, String>>>() {
-				});
-		return data;
-		// {map, map}
-	}
+            driver = new ChromeDriver(options);
+            driver.manage().window().setSize(new Dimension(1440, 900)); // to run fullscreen
+        } else if (browserName.equalsIgnoreCase("firefox")) {
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver();
+        } else if (browserName.equalsIgnoreCase("edge")) {
+            WebDriverManager.edgedriver().setup();
+            driver = new EdgeDriver();
+        } else {
+            throw new IllegalArgumentException("Unsupported browser: " + browserName);
+        }
 
-	public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
-		TakesScreenshot ts = (TakesScreenshot) driver;
-		File source = ts.getScreenshotAs(OutputType.FILE);
-		File file = new File(System.getProperty("user.dir") + "\\reports\\" + testCaseName + ".png");
-		FileUtils.copyFile(source, file);
-		return System.getProperty("user.dir") + "\\reports\\" + testCaseName + ".png";
-	}
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        return driver;
+    }
 
-	@BeforeClass(alwaysRun = true)
-	public LandingPage landingPage() throws IOException {
-		driver = initializeDriver();
-		DisableAdsTest();
-		landingPage = new LandingPage(driver);
-		return landingPage;		
-	}
+    public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException {
+        String jsonContent = FileUtils.readFileToString(new File(filePath), StandardCharsets.UTF_8);
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>() {});
+    }
 
-	@AfterClass(alwaysRun = true)
-	public void tearDown() {
-		driver.quit();
-	}
+    public String getScreenshot(String testCaseName, WebDriver driver) throws IOException {
+        TakesScreenshot ts = (TakesScreenshot) driver;
+        File source = ts.getScreenshotAs(OutputType.FILE);
+        File destination = new File(System.getProperty("user.dir") + "\\reports\\" + testCaseName + ".png");
+        FileUtils.copyFile(source, destination);
+        return destination.getAbsolutePath();
+    }
 
-	public void DisableAdsTest() {
-		// Navigate to the webpage
-		String mainHandle = driver.getWindowHandle();
-		driver.get("https://automationexercise.com/");
-		//consentButton.click(); // consent button
-		// Get all window handles
-		Set<String> windowHandles = driver.getWindowHandles();
+    @BeforeClass(alwaysRun = true)
+    public LandingPage landingPage() throws IOException {
+        driver = initializeDriver();
+        if (driver == null) {
+            throw new RuntimeException("Failed to initialize WebDriver.");
+        }
+        DisableAdsTest();
+        landingPage = new LandingPage(driver);
+        return landingPage;
+    }
 
-		// Iterate over all window handles
-		for (String handle : windowHandles) {
-			// Switch to each window/tab
-			driver.switchTo().window(handle);
-			if (!driver.getTitle().equals("Automation Exercise")) {
-				driver.close();
-				try {
-					Thread.sleep(500);// Close the tab
-				} catch (InterruptedException e) {
-					e.printStackTrace();
-				}
-			}
-		}
+    @AfterClass(alwaysRun = true)
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
 
-		// Switch back to the original window
-		driver.switchTo().window(mainHandle);
-		try {
-			Thread.sleep(500);// Close the tab
-		} catch (InterruptedException e) {
-			e.printStackTrace();
-		}
-	}
+    public void DisableAdsTest() {
+        String mainHandle = driver.getWindowHandle();
+        driver.get("https://automationexercise.com/");
+        Set<String> windowHandles = driver.getWindowHandles();
 
+        for (String handle : windowHandles) {
+            driver.switchTo().window(handle);
+            if (!driver.getTitle().equals("Automation Exercise")) {
+                driver.close();
+                try {
+                    Thread.sleep(500); // Allow time for tab closure
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        driver.switchTo().window(mainHandle);
+        try {
+            Thread.sleep(500); // Allow time for tab closure
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+            e.printStackTrace();
+        }
+    }
 }

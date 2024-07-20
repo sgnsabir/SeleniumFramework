@@ -1,47 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results retried="6" ignored="6" total="26" passed="11" failed="3" skipped="0">
+<testng-results retried="6" ignored="6" total="37" passed="22" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-20T11:18:43 CEST" name="Smoke" finished-at="2024-07-20T11:21:28 CEST" duration-ms="165165">
+  <suite started-at="2024-07-20T12:48:31 CEST" name="Regression" finished-at="2024-07-20T12:51:51 CEST" duration-ms="200361">
     <groups>
     </groups>
-    <test started-at="2024-07-20T11:18:43 CEST" name="Smoke Test" finished-at="2024-07-20T11:21:28 CEST" duration-ms="165165">
-      <class name="sleniumframework.tests.contactUsFormValidation">
-        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.contactUsFormValidation@648c94da]" started-at="2024-07-20T11:19:06 CEST" name="landingPage" finished-at="2024-07-20T11:19:08 CEST" duration-ms="2366" status="PASS">
+    <test started-at="2024-07-20T12:48:31 CEST" name="Regression Test" finished-at="2024-07-20T12:51:51 CEST" duration-ms="200361">
+      <class name="sleniumframework.tests.EndToEndTest">
+        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.EndToEndTest@5dcb4f5f]" started-at="2024-07-20T12:49:17 CEST" name="landingPage" finished-at="2024-07-20T12:49:23 CEST" duration-ms="5729" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- landingPage -->
-        <test-method signature="validateContactUsForm()[pri:1, instance:sleniumframework.tests.contactUsFormValidation@648c94da]" started-at="2024-07-20T11:19:08 CEST" name="validateContactUsForm" finished-at="2024-07-20T11:19:12 CEST" duration-ms="4281" status="PASS">
+        <test-method signature="registerPage()[pri:17, instance:sleniumframework.tests.EndToEndTest@5dcb4f5f]" started-at="2024-07-20T12:49:23 CEST" name="registerPage" finished-at="2024-07-20T12:49:27 CEST" duration-ms="3989" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerPage -->
+        <test-method signature="validLogin()[pri:18, instance:sleniumframework.tests.EndToEndTest@5dcb4f5f]" started-at="2024-07-20T12:49:27 CEST" name="validLogin" finished-at="2024-07-20T12:49:29 CEST" duration-ms="1721" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method signature="invalidLogin()[pri:19, instance:sleniumframework.tests.EndToEndTest@5dcb4f5f]" started-at="2024-07-20T12:49:29 CEST" name="invalidLogin" finished-at="2024-07-20T12:49:30 CEST" duration-ms="672" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLogin -->
+        <test-method signature="logoutUser()[pri:20, instance:sleniumframework.tests.EndToEndTest@5dcb4f5f]" started-at="2024-07-20T12:49:30 CEST" name="logoutUser" finished-at="2024-07-20T12:49:31 CEST" duration-ms="1699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoutUser -->
+        <test-method signature="registerWithExistingEmail()[pri:21, instance:sleniumframework.tests.EndToEndTest@5dcb4f5f]" started-at="2024-07-20T12:49:31 CEST" name="registerWithExistingEmail" finished-at="2024-07-20T12:49:32 CEST" duration-ms="696" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithExistingEmail -->
+        <test-method signature="contactUsForm()[pri:22, instance:sleniumframework.tests.EndToEndTest@5dcb4f5f]" started-at="2024-07-20T12:49:32 CEST" name="contactUsForm" finished-at="2024-07-20T12:49:34 CEST" duration-ms="1872" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contactUsForm -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.EndToEndTest@5dcb4f5f]" started-at="2024-07-20T12:49:34 CEST" name="tearDown" finished-at="2024-07-20T12:49:34 CEST" duration-ms="194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- sleniumframework.tests.EndToEndTest -->
+      <class name="sleniumframework.tests.contactUsFormValidation">
+        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.contactUsFormValidation@1fde5d22]" started-at="2024-07-20T12:49:09 CEST" name="landingPage" finished-at="2024-07-20T12:49:15 CEST" duration-ms="6038" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- landingPage -->
+        <test-method signature="validateContactUsForm()[pri:1, instance:sleniumframework.tests.contactUsFormValidation@1fde5d22]" started-at="2024-07-20T12:49:15 CEST" name="validateContactUsForm" finished-at="2024-07-20T12:49:17 CEST" duration-ms="2684" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateContactUsForm -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.contactUsFormValidation@648c94da]" started-at="2024-07-20T11:19:12 CEST" name="tearDown" finished-at="2024-07-20T11:19:12 CEST" duration-ms="184" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.contactUsFormValidation@1fde5d22]" started-at="2024-07-20T12:49:17 CEST" name="tearDown" finished-at="2024-07-20T12:49:17 CEST" duration-ms="186" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- sleniumframework.tests.contactUsFormValidation -->
       <class name="sleniumframework.tests.EndToEndOrderProduct">
-        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:12 CEST" name="landingPage" finished-at="2024-07-20T11:19:18 CEST" duration-ms="5471" status="PASS">
+        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:49:34 CEST" name="landingPage" finished-at="2024-07-20T12:49:40 CEST" duration-ms="6100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- landingPage -->
-        <test-method signature="productOrderThroughProductDetails()[pri:7, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:18 CEST" name="productOrderThroughProductDetails" finished-at="2024-07-20T11:19:29 CEST" duration-ms="11333" status="PASS">
+        <test-method signature="productOrderThroughProductDetails()[pri:7, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:49:40 CEST" name="productOrderThroughProductDetails" finished-at="2024-07-20T12:49:51 CEST" duration-ms="10620" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productOrderThroughProductDetails -->
-        <test-method signature="searchProduct()[pri:8, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:29 CEST" name="searchProduct" finished-at="2024-07-20T11:19:31 CEST" duration-ms="1430" status="PASS">
+        <test-method signature="searchProduct()[pri:8, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:49:51 CEST" name="searchProduct" finished-at="2024-07-20T12:49:52 CEST" duration-ms="1180" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchProduct -->
-        <test-method signature="subscriptionValidation()[pri:9, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:31 CEST" name="subscriptionValidation" finished-at="2024-07-20T11:19:33 CEST" duration-ms="1867" status="PASS">
+        <test-method signature="subscriptionValidation()[pri:9, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:49:52 CEST" name="subscriptionValidation" finished-at="2024-07-20T12:49:53 CEST" duration-ms="1346" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- subscriptionValidation -->
-        <test-method signature="addProductInCart()[pri:10, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:33 CEST" name="addProductInCart" finished-at="2024-07-20T11:19:34 CEST" duration-ms="1642" status="PASS">
+        <test-method signature="addProductInCart()[pri:10, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:49:53 CEST" name="addProductInCart" finished-at="2024-07-20T12:49:55 CEST" duration-ms="1731" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addProductInCart -->
-        <test-method retried="true" signature="validateProductQuantityInCart()[pri:11, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:34 CEST" name="validateProductQuantityInCart" finished-at="2024-07-20T11:19:44 CEST" duration-ms="10060" status="SKIP">
+        <test-method retried="true" signature="validateProductQuantityInCart()[pri:11, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:49:55 CEST" name="validateProductQuantityInCart" finished-at="2024-07-20T12:50:05 CEST" duration-ms="10033" status="SKIP">
           <exception class="java.lang.IndexOutOfBoundsException">
             <message>
               <![CDATA[Index 1 out of bounds for length 0]]>
@@ -96,7 +130,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateProductQuantityInCart -->
-        <test-method retried="true" signature="validateProductQuantityInCart()[pri:11, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:44 CEST" name="validateProductQuantityInCart" finished-at="2024-07-20T11:19:54 CEST" duration-ms="10043" status="SKIP">
+        <test-method retried="true" signature="validateProductQuantityInCart()[pri:11, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:50:05 CEST" name="validateProductQuantityInCart" finished-at="2024-07-20T12:50:15 CEST" duration-ms="10028" status="SKIP">
           <exception class="java.lang.IndexOutOfBoundsException">
             <message>
               <![CDATA[Index 1 out of bounds for length 0]]>
@@ -151,7 +185,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateProductQuantityInCart -->
-        <test-method signature="validateProductQuantityInCart()[pri:11, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:54 CEST" name="validateProductQuantityInCart" finished-at="2024-07-20T11:20:04 CEST" duration-ms="10051" status="FAIL">
+        <test-method signature="validateProductQuantityInCart()[pri:11, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:50:15 CEST" name="validateProductQuantityInCart" finished-at="2024-07-20T12:50:25 CEST" duration-ms="10015" status="FAIL">
           <exception class="java.lang.IndexOutOfBoundsException">
             <message>
               <![CDATA[Index 1 out of bounds for length 0]]>
@@ -206,7 +240,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateProductQuantityInCart -->
-        <test-method retried="true" signature="registerWhileCheckout()[pri:12, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:05 CEST" name="registerWhileCheckout" finished-at="2024-07-20T11:20:15 CEST" duration-ms="10035" status="SKIP">
+        <test-method retried="true" signature="registerWhileCheckout()[pri:12, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:50:25 CEST" name="registerWhileCheckout" finished-at="2024-07-20T12:50:35 CEST" duration-ms="10034" status="SKIP">
           <exception class="java.lang.IndexOutOfBoundsException">
             <message>
               <![CDATA[Index 1 out of bounds for length 0]]>
@@ -262,7 +296,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerWhileCheckout -->
-        <test-method retried="true" signature="registerWhileCheckout()[pri:12, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:15 CEST" name="registerWhileCheckout" finished-at="2024-07-20T11:20:25 CEST" duration-ms="10089" status="SKIP">
+        <test-method retried="true" signature="registerWhileCheckout()[pri:12, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:50:35 CEST" name="registerWhileCheckout" finished-at="2024-07-20T12:50:45 CEST" duration-ms="10014" status="SKIP">
           <exception class="java.lang.IndexOutOfBoundsException">
             <message>
               <![CDATA[Index 1 out of bounds for length 0]]>
@@ -318,7 +352,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerWhileCheckout -->
-        <test-method signature="registerWhileCheckout()[pri:12, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:25 CEST" name="registerWhileCheckout" finished-at="2024-07-20T11:20:35 CEST" duration-ms="10089" status="FAIL">
+        <test-method signature="registerWhileCheckout()[pri:12, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:50:45 CEST" name="registerWhileCheckout" finished-at="2024-07-20T12:50:55 CEST" duration-ms="10012" status="FAIL">
           <exception class="java.lang.IndexOutOfBoundsException">
             <message>
               <![CDATA[Index 1 out of bounds for length 0]]>
@@ -374,41 +408,41 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerWhileCheckout -->
-        <test-method signature="removeProductFromCart()[pri:13, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:35 CEST" name="removeProductFromCart" finished-at="2024-07-20T11:20:38 CEST" duration-ms="3397" status="PASS">
+        <test-method signature="removeProductFromCart()[pri:13, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:50:55 CEST" name="removeProductFromCart" finished-at="2024-07-20T12:50:59 CEST" duration-ms="3776" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeProductFromCart -->
-        <test-method signature="viewCategoryProducts()[pri:14, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:38 CEST" name="viewCategoryProducts" finished-at="2024-07-20T11:20:41 CEST" duration-ms="2267" status="PASS">
+        <test-method signature="viewCategoryProducts()[pri:14, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:50:59 CEST" name="viewCategoryProducts" finished-at="2024-07-20T12:51:03 CEST" duration-ms="3849" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- viewCategoryProducts -->
-        <test-method signature="viewCartBrandProducts()[pri:15, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:41 CEST" name="viewCartBrandProducts" finished-at="2024-07-20T11:20:43 CEST" duration-ms="2113" status="PASS">
+        <test-method signature="viewCartBrandProducts()[pri:15, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:51:03 CEST" name="viewCartBrandProducts" finished-at="2024-07-20T12:51:06 CEST" duration-ms="2740" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- viewCartBrandProducts -->
-        <test-method retried="true" signature="validateCartProductAfterLogin()[pri:16, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:43 CEST" name="validateCartProductAfterLogin" finished-at="2024-07-20T11:20:57 CEST" duration-ms="13982" status="SKIP">
+        <test-method retried="true" signature="validateCartProductAfterLogin()[pri:16, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:51:06 CEST" name="validateCartProductAfterLogin" finished-at="2024-07-20T12:51:20 CEST" duration-ms="14513" status="SKIP">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"[href*='/login']"}
   (Session info: chrome=126.0.6478.182)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
+Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [67b00c8e41c7ad2b73db45c2a658c6cb, findElement {value=[href*='/login'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51865/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 67b00c8e41c7ad2b73db45c2a658c6cb]]>
+Command: [986d324da8bd38c0ec30a72a3b912c1c, findElement {using=css selector, value=[href*='/login']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60834}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60834/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 986d324da8bd38c0ec30a72a3b912c1c]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"[href*='/login']"}
   (Session info: chrome=126.0.6478.182)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
+Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [67b00c8e41c7ad2b73db45c2a658c6cb, findElement {value=[href*='/login'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51865/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 67b00c8e41c7ad2b73db45c2a658c6cb
+Command: [986d324da8bd38c0ec30a72a3b912c1c, findElement {using=css selector, value=[href*='/login']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60834}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60834/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 986d324da8bd38c0ec30a72a3b912c1c
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -464,29 +498,29 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCartProductAfterLogin -->
-        <test-method retried="true" signature="validateCartProductAfterLogin()[pri:16, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:57 CEST" name="validateCartProductAfterLogin" finished-at="2024-07-20T11:21:12 CEST" duration-ms="15820" status="SKIP">
+        <test-method retried="true" signature="validateCartProductAfterLogin()[pri:16, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:51:20 CEST" name="validateCartProductAfterLogin" finished-at="2024-07-20T12:51:36 CEST" duration-ms="15233" status="SKIP">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"[href*='/login']"}
   (Session info: chrome=126.0.6478.182)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
+Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [67b00c8e41c7ad2b73db45c2a658c6cb, findElement {value=[href*='/login'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51865/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 67b00c8e41c7ad2b73db45c2a658c6cb]]>
+Command: [986d324da8bd38c0ec30a72a3b912c1c, findElement {using=css selector, value=[href*='/login']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60834}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60834/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 986d324da8bd38c0ec30a72a3b912c1c]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"[href*='/login']"}
   (Session info: chrome=126.0.6478.182)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
+Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [67b00c8e41c7ad2b73db45c2a658c6cb, findElement {value=[href*='/login'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51865/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 67b00c8e41c7ad2b73db45c2a658c6cb
+Command: [986d324da8bd38c0ec30a72a3b912c1c, findElement {using=css selector, value=[href*='/login']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60834}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60834/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 986d324da8bd38c0ec30a72a3b912c1c
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -542,29 +576,29 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCartProductAfterLogin -->
-        <test-method signature="validateCartProductAfterLogin()[pri:16, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:21:12 CEST" name="validateCartProductAfterLogin" finished-at="2024-07-20T11:21:28 CEST" duration-ms="15223" status="FAIL">
+        <test-method signature="validateCartProductAfterLogin()[pri:16, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:51:36 CEST" name="validateCartProductAfterLogin" finished-at="2024-07-20T12:51:51 CEST" duration-ms="15229" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"[href*='/login']"}
   (Session info: chrome=126.0.6478.182)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
+Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [67b00c8e41c7ad2b73db45c2a658c6cb, findElement {value=[href*='/login'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51865/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 67b00c8e41c7ad2b73db45c2a658c6cb]]>
+Command: [986d324da8bd38c0ec30a72a3b912c1c, findElement {using=css selector, value=[href*='/login']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60834}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60834/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 986d324da8bd38c0ec30a72a3b912c1c]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"[href*='/login']"}
   (Session info: chrome=126.0.6478.182)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
+Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [67b00c8e41c7ad2b73db45c2a658c6cb, findElement {value=[href*='/login'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51865/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 67b00c8e41c7ad2b73db45c2a658c6cb
+Command: [986d324da8bd38c0ec30a72a3b912c1c, findElement {using=css selector, value=[href*='/login']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60834}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60834/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 986d324da8bd38c0ec30a72a3b912c1c
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -620,33 +654,63 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCartProductAfterLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:21:28 CEST" name="tearDown" finished-at="2024-07-20T11:21:28 CEST" duration-ms="225" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@71812481]" started-at="2024-07-20T12:51:51 CEST" name="tearDown" finished-at="2024-07-20T12:51:51 CEST" duration-ms="224" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- sleniumframework.tests.EndToEndOrderProduct -->
       <class name="sleniumframework.tests.PageTitleValidation">
-        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.PageTitleValidation@7dda48d9]" started-at="2024-07-20T11:18:43 CEST" name="landingPage" finished-at="2024-07-20T11:18:50 CEST" duration-ms="7245" status="PASS">
+        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.PageTitleValidation@1f3f02ee]" started-at="2024-07-20T12:48:47 CEST" name="landingPage" finished-at="2024-07-20T12:48:53 CEST" duration-ms="6298" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- landingPage -->
-        <test-method signature="headerMenuValidation()[pri:23, instance:sleniumframework.tests.PageTitleValidation@7dda48d9]" started-at="2024-07-20T11:18:50 CEST" name="headerMenuValidation" finished-at="2024-07-20T11:18:55 CEST" duration-ms="4653" status="PASS">
+        <test-method signature="headerMenuValidation()[pri:23, instance:sleniumframework.tests.PageTitleValidation@1f3f02ee]" started-at="2024-07-20T12:48:53 CEST" name="headerMenuValidation" finished-at="2024-07-20T12:48:58 CEST" duration-ms="5037" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- headerMenuValidation -->
-        <test-method signature="addBannerValidation()[pri:24, instance:sleniumframework.tests.PageTitleValidation@7dda48d9]" started-at="2024-07-20T11:18:55 CEST" name="addBannerValidation" finished-at="2024-07-20T11:18:56 CEST" duration-ms="1512" status="PASS">
+        <test-method signature="addBannerValidation()[pri:24, instance:sleniumframework.tests.PageTitleValidation@1f3f02ee]" started-at="2024-07-20T12:48:58 CEST" name="addBannerValidation" finished-at="2024-07-20T12:48:59 CEST" duration-ms="1443" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addBannerValidation -->
-        <test-method signature="sideMenuValidation()[pri:25, instance:sleniumframework.tests.PageTitleValidation@7dda48d9]" started-at="2024-07-20T11:18:56 CEST" name="sideMenuValidation" finished-at="2024-07-20T11:19:05 CEST" duration-ms="9067" status="PASS">
+        <test-method signature="sideMenuValidation()[pri:25, instance:sleniumframework.tests.PageTitleValidation@1f3f02ee]" started-at="2024-07-20T12:48:59 CEST" name="sideMenuValidation" finished-at="2024-07-20T12:49:08 CEST" duration-ms="8889" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sideMenuValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.PageTitleValidation@7dda48d9]" started-at="2024-07-20T11:19:05 CEST" name="tearDown" finished-at="2024-07-20T11:19:06 CEST" duration-ms="203" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.PageTitleValidation@1f3f02ee]" started-at="2024-07-20T12:49:08 CEST" name="tearDown" finished-at="2024-07-20T12:49:09 CEST" duration-ms="218" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- sleniumframework.tests.PageTitleValidation -->
-    </test> <!-- Smoke Test -->
-  </suite> <!-- Smoke -->
+      <class name="sleniumframework.tests.EndToEndLoginSignup">
+        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.EndToEndLoginSignup@53de625d]" started-at="2024-07-20T12:48:31 CEST" name="landingPage" finished-at="2024-07-20T12:48:38 CEST" duration-ms="7465" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- landingPage -->
+        <test-method signature="signupFlow()[pri:2, instance:sleniumframework.tests.EndToEndLoginSignup@53de625d]" started-at="2024-07-20T12:48:38 CEST" name="signupFlow" finished-at="2024-07-20T12:48:42 CEST" duration-ms="3271" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signupFlow -->
+        <test-method signature="validLogin()[pri:3, instance:sleniumframework.tests.EndToEndLoginSignup@53de625d]" started-at="2024-07-20T12:48:42 CEST" name="validLogin" finished-at="2024-07-20T12:48:43 CEST" duration-ms="1718" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validLogin -->
+        <test-method signature="invalidLogin()[pri:4, instance:sleniumframework.tests.EndToEndLoginSignup@53de625d]" started-at="2024-07-20T12:48:43 CEST" name="invalidLogin" finished-at="2024-07-20T12:48:44 CEST" duration-ms="700" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- invalidLogin -->
+        <test-method signature="registerWithExistingEmail()[pri:5, instance:sleniumframework.tests.EndToEndLoginSignup@53de625d]" started-at="2024-07-20T12:48:44 CEST" name="registerWithExistingEmail" finished-at="2024-07-20T12:48:45 CEST" duration-ms="700" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWithExistingEmail -->
+        <test-method signature="deleteAccount()[pri:6, instance:sleniumframework.tests.EndToEndLoginSignup@53de625d]" started-at="2024-07-20T12:48:45 CEST" name="deleteAccount" finished-at="2024-07-20T12:48:46 CEST" duration-ms="1759" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAccount -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.EndToEndLoginSignup@53de625d]" started-at="2024-07-20T12:48:46 CEST" name="tearDown" finished-at="2024-07-20T12:48:47 CEST" duration-ms="201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- sleniumframework.tests.EndToEndLoginSignup -->
+    </test> <!-- Regression Test -->
+  </suite> <!-- Regression -->
 </testng-results>

@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 20, Failures: 3, Errors: 0, Skipped: 6, Time elapsed: 166.0 s <<< FAILURE! -- in TestSuite
-sleniumframework.tests.EndToEndOrderProduct.validateProductQuantityInCart -- Time elapsed: 10.18 s <<< FAILURE!
+Tests run: 31, Failures: 3, Errors: 0, Skipped: 6, Time elapsed: 201.2 s <<< FAILURE! -- in TestSuite
+sleniumframework.tests.EndToEndOrderProduct.validateProductQuantityInCart -- Time elapsed: 10.12 s <<< FAILURE!
 java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 0
 	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
 	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
@@ -47,7 +47,7 @@ java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 0
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-sleniumframework.tests.EndToEndOrderProduct.registerWhileCheckout -- Time elapsed: 10.19 s <<< FAILURE!
+sleniumframework.tests.EndToEndOrderProduct.registerWhileCheckout -- Time elapsed: 10.12 s <<< FAILURE!
 java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 0
 	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
 	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
@@ -93,17 +93,17 @@ java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 0
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-sleniumframework.tests.EndToEndOrderProduct.validateCartProductAfterLogin -- Time elapsed: 15.38 s <<< FAILURE!
+sleniumframework.tests.EndToEndOrderProduct.validateCartProductAfterLogin -- Time elapsed: 15.39 s <<< FAILURE!
 org.openqa.selenium.NoSuchElementException: 
 no such element: Unable to locate element: {"method":"css selector","selector":"[href*='/login']"}
   (Session info: chrome=126.0.6478.182)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
+Build info: version: '4.22.0', revision: 'c5f3146703*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [67b00c8e41c7ad2b73db45c2a658c6cb, findElement {value=[href*='/login'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51865/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 67b00c8e41c7ad2b73db45c2a658c6cb
+Command: [986d324da8bd38c0ec30a72a3b912c1c, findElement {using=css selector, value=[href*='/login']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60834}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60834/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 986d324da8bd38c0ec30a72a3b912c1c
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
