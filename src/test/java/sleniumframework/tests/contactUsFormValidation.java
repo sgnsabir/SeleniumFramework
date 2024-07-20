@@ -1,10 +1,8 @@
 package sleniumframework.tests;
 
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import java.awt.AWTException;
 
-import org.testng.Assert;
+import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
 import sleniumframework.pageobjects.ContactUsPage;
@@ -15,7 +13,7 @@ public class contactUsFormValidation extends BaseTest{
 	String email = "automationtester0001@gmail.com";
 	String filePath = System.getProperty("user.dir") + "\\test_file.pdf";
 	//Test Case 6: Contact Us Form
-	@Test
+	@Test(priority = 1)
 	public void validateContactUsForm() throws AWTException, InterruptedException {
 		String contactUsTitle = landingPage.contactUs();
 		AssertJUnit.assertEquals(contactUsTitle, "Automation Exercise - Contact Us");

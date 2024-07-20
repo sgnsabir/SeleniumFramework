@@ -1,184 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="25" passed="21" failed="4" skipped="0">
+<testng-results retried="6" ignored="6" total="26" passed="11" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-07-14T21:58:48 CEST" name="Regression" finished-at="2024-07-14T22:00:58 CEST" duration-ms="129614">
+  <suite started-at="2024-07-20T11:18:43 CEST" name="Smoke" finished-at="2024-07-20T11:21:28 CEST" duration-ms="165165">
     <groups>
     </groups>
-    <test started-at="2024-07-14T21:58:48 CEST" name="regression" finished-at="2024-07-14T22:00:58 CEST" duration-ms="129614">
-      <class name="sleniumframework.tests.EndToEndTest">
-        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.EndToEndTest@3ad83a66]" started-at="2024-07-14T21:59:36 CEST" name="landingPage" finished-at="2024-07-14T21:59:42 CEST" duration-ms="5891" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- landingPage -->
-        <test-method signature="contactUsForm()[pri:0, instance:sleniumframework.tests.EndToEndTest@3ad83a66]" started-at="2024-07-14T21:59:42 CEST" name="contactUsForm" finished-at="2024-07-14T21:59:42 CEST" duration-ms="2" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- contactUsForm -->
-        <test-method signature="invalidLogin()[pri:0, instance:sleniumframework.tests.EndToEndTest@3ad83a66]" started-at="2024-07-14T21:59:42 CEST" name="invalidLogin" finished-at="2024-07-14T21:59:42 CEST" duration-ms="725" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invalidLogin -->
-        <test-method signature="logoutUser()[pri:0, instance:sleniumframework.tests.EndToEndTest@3ad83a66]" started-at="2024-07-14T21:59:42 CEST" name="logoutUser" finished-at="2024-07-14T21:59:44 CEST" duration-ms="1790" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logoutUser -->
-        <test-method signature="registerPage()[pri:0, instance:sleniumframework.tests.EndToEndTest@3ad83a66]" started-at="2024-07-14T21:59:44 CEST" name="registerPage" finished-at="2024-07-14T21:59:55 CEST" duration-ms="10686" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#id_gender1"}
-  (Session info: chrome=126.0.6478.127)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d2dc0c30e1c08361fd876c703caefb04, findElement {value=id_gender1, using=id}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57962/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d2dc0c30e1c08361fd876c703caefb04]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#id_gender1"}
-  (Session info: chrome=126.0.6478.127)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d2dc0c30e1c08361fd876c703caefb04, findElement {value=id_gender1, using=id}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57962/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d2dc0c30e1c08361fd876c703caefb04
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:66)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-at sleniumframework.tests.EndToEndTest.registerPage(EndToEndTest.java:24)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
-at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerPage -->
-        <test-method signature="registerWithExistingEmail()[pri:0, instance:sleniumframework.tests.EndToEndTest@3ad83a66]" started-at="2024-07-14T21:59:55 CEST" name="registerWithExistingEmail" finished-at="2024-07-14T21:59:56 CEST" duration-ms="1158" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerWithExistingEmail -->
-        <test-method signature="validLogin()[pri:0, instance:sleniumframework.tests.EndToEndTest@3ad83a66]" started-at="2024-07-14T21:59:56 CEST" name="validLogin" finished-at="2024-07-14T21:59:59 CEST" duration-ms="2786" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.EndToEndTest@3ad83a66]" started-at="2024-07-14T21:59:59 CEST" name="tearDown" finished-at="2024-07-14T21:59:59 CEST" duration-ms="189" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- sleniumframework.tests.EndToEndTest -->
+    <test started-at="2024-07-20T11:18:43 CEST" name="Smoke Test" finished-at="2024-07-20T11:21:28 CEST" duration-ms="165165">
       <class name="sleniumframework.tests.contactUsFormValidation">
-        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.contactUsFormValidation@5745ca0e]" started-at="2024-07-14T21:59:29 CEST" name="landingPage" finished-at="2024-07-14T21:59:34 CEST" duration-ms="5498" status="PASS">
+        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.contactUsFormValidation@648c94da]" started-at="2024-07-20T11:19:06 CEST" name="landingPage" finished-at="2024-07-20T11:19:08 CEST" duration-ms="2366" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- landingPage -->
-        <test-method signature="validateContactUsForm()[pri:0, instance:sleniumframework.tests.contactUsFormValidation@5745ca0e]" started-at="2024-07-14T21:59:34 CEST" name="validateContactUsForm" finished-at="2024-07-14T21:59:36 CEST" duration-ms="1434" status="PASS">
+        <test-method signature="validateContactUsForm()[pri:1, instance:sleniumframework.tests.contactUsFormValidation@648c94da]" started-at="2024-07-20T11:19:08 CEST" name="validateContactUsForm" finished-at="2024-07-20T11:19:12 CEST" duration-ms="4281" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateContactUsForm -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.contactUsFormValidation@5745ca0e]" started-at="2024-07-14T21:59:36 CEST" name="tearDown" finished-at="2024-07-14T21:59:36 CEST" duration-ms="184" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.contactUsFormValidation@648c94da]" started-at="2024-07-20T11:19:12 CEST" name="tearDown" finished-at="2024-07-20T11:19:12 CEST" duration-ms="184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- sleniumframework.tests.contactUsFormValidation -->
       <class name="sleniumframework.tests.EndToEndOrderProduct">
-        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@3cce5371]" started-at="2024-07-14T21:59:59 CEST" name="landingPage" finished-at="2024-07-14T22:00:05 CEST" duration-ms="5471" status="PASS">
+        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:12 CEST" name="landingPage" finished-at="2024-07-20T11:19:18 CEST" duration-ms="5471" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- landingPage -->
-        <test-method signature="addProductInCart()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@3cce5371]" started-at="2024-07-14T22:00:05 CEST" name="addProductInCart" finished-at="2024-07-14T22:00:06 CEST" duration-ms="1785" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addProductInCart -->
-        <test-method signature="productOrderThroughProductDetails()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@3cce5371]" started-at="2024-07-14T22:00:06 CEST" name="productOrderThroughProductDetails" finished-at="2024-07-14T22:00:17 CEST" duration-ms="10294" status="PASS">
+        <test-method signature="productOrderThroughProductDetails()[pri:7, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:18 CEST" name="productOrderThroughProductDetails" finished-at="2024-07-20T11:19:29 CEST" duration-ms="11333" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- productOrderThroughProductDetails -->
-        <test-method signature="registerWhileCheckout()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@3cce5371]" started-at="2024-07-14T22:00:17 CEST" name="registerWhileCheckout" finished-at="2024-07-14T22:00:28 CEST" duration-ms="11800" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="searchProduct()[pri:8, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:29 CEST" name="searchProduct" finished-at="2024-07-20T11:19:31 CEST" duration-ms="1430" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct -->
+        <test-method signature="subscriptionValidation()[pri:9, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:31 CEST" name="subscriptionValidation" finished-at="2024-07-20T11:19:33 CEST" duration-ms="1867" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- subscriptionValidation -->
+        <test-method signature="addProductInCart()[pri:10, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:33 CEST" name="addProductInCart" finished-at="2024-07-20T11:19:34 CEST" duration-ms="1642" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addProductInCart -->
+        <test-method retried="true" signature="validateProductQuantityInCart()[pri:11, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:34 CEST" name="validateProductQuantityInCart" finished-at="2024-07-20T11:19:44 CEST" duration-ms="10060" status="SKIP">
+          <exception class="java.lang.IndexOutOfBoundsException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"p a[href*='login']"}
-  (Session info: chrome=126.0.6478.127)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0905b097a1bb6be55280d8537ccf43f8, findElement {value=p a[href*='login'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58089}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58089/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0905b097a1bb6be55280d8537ccf43f8]]>
+              <![CDATA[Index 1 out of bounds for length 0]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"p a[href*='login']"}
-  (Session info: chrome=126.0.6478.127)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.19.1', revision: 'abe0ee07dc'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0905b097a1bb6be55280d8537ccf43f8, findElement {value=p a[href*='login'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58089}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58089/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0905b097a1bb6be55280d8537ccf43f8
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
-at sleniumframework.pageobjects.CartPage.registerLoginPage(CartPage.java:116)
-at sleniumframework.tests.EndToEndOrderProduct.registerWhileCheckout(EndToEndOrderProduct.java:150)
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 0
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+at java.base/java.util.Objects.checkIndex(Objects.java:385)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy12.get(Unknown Source)
+at sleniumframework.pageobjects.ProductsPage.productName(ProductsPage.java:68)
+at sleniumframework.pageobjects.ProductsPage.productDetails(ProductsPage.java:73)
+at sleniumframework.tests.EndToEndOrderProduct.validateProductQuantityInCart(EndToEndOrderProduct.java:134)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -211,45 +92,323 @@ at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProductQuantityInCart -->
+        <test-method retried="true" signature="validateProductQuantityInCart()[pri:11, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:44 CEST" name="validateProductQuantityInCart" finished-at="2024-07-20T11:19:54 CEST" duration-ms="10043" status="SKIP">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index 1 out of bounds for length 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 0
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+at java.base/java.util.Objects.checkIndex(Objects.java:385)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy12.get(Unknown Source)
+at sleniumframework.pageobjects.ProductsPage.productName(ProductsPage.java:68)
+at sleniumframework.pageobjects.ProductsPage.productDetails(ProductsPage.java:73)
+at sleniumframework.tests.EndToEndOrderProduct.validateProductQuantityInCart(EndToEndOrderProduct.java:134)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProductQuantityInCart -->
+        <test-method signature="validateProductQuantityInCart()[pri:11, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:19:54 CEST" name="validateProductQuantityInCart" finished-at="2024-07-20T11:20:04 CEST" duration-ms="10051" status="FAIL">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index 1 out of bounds for length 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 0
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+at java.base/java.util.Objects.checkIndex(Objects.java:385)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy12.get(Unknown Source)
+at sleniumframework.pageobjects.ProductsPage.productName(ProductsPage.java:68)
+at sleniumframework.pageobjects.ProductsPage.productDetails(ProductsPage.java:73)
+at sleniumframework.tests.EndToEndOrderProduct.validateProductQuantityInCart(EndToEndOrderProduct.java:134)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateProductQuantityInCart -->
+        <test-method retried="true" signature="registerWhileCheckout()[pri:12, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:05 CEST" name="registerWhileCheckout" finished-at="2024-07-20T11:20:15 CEST" duration-ms="10035" status="SKIP">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index 1 out of bounds for length 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 0
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+at java.base/java.util.Objects.checkIndex(Objects.java:385)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy12.get(Unknown Source)
+at sleniumframework.pageobjects.ProductsPage.productName(ProductsPage.java:68)
+at sleniumframework.pageobjects.ProductsPage.productDetails(ProductsPage.java:73)
+at sleniumframework.tests.EndToEndOrderProduct.validateProductQuantityInCart(EndToEndOrderProduct.java:134)
+at sleniumframework.tests.EndToEndOrderProduct.registerWhileCheckout(EndToEndOrderProduct.java:146)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- registerWhileCheckout -->
-        <test-method signature="removeProductFromCart()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@3cce5371]" started-at="2024-07-14T22:00:28 CEST" name="removeProductFromCart" finished-at="2024-07-14T22:00:32 CEST" duration-ms="3608" status="PASS">
+        <test-method retried="true" signature="registerWhileCheckout()[pri:12, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:15 CEST" name="registerWhileCheckout" finished-at="2024-07-20T11:20:25 CEST" duration-ms="10089" status="SKIP">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index 1 out of bounds for length 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 0
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+at java.base/java.util.Objects.checkIndex(Objects.java:385)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy12.get(Unknown Source)
+at sleniumframework.pageobjects.ProductsPage.productName(ProductsPage.java:68)
+at sleniumframework.pageobjects.ProductsPage.productDetails(ProductsPage.java:73)
+at sleniumframework.tests.EndToEndOrderProduct.validateProductQuantityInCart(EndToEndOrderProduct.java:134)
+at sleniumframework.tests.EndToEndOrderProduct.registerWhileCheckout(EndToEndOrderProduct.java:146)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWhileCheckout -->
+        <test-method signature="registerWhileCheckout()[pri:12, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:25 CEST" name="registerWhileCheckout" finished-at="2024-07-20T11:20:35 CEST" duration-ms="10089" status="FAIL">
+          <exception class="java.lang.IndexOutOfBoundsException">
+            <message>
+              <![CDATA[Index 1 out of bounds for length 0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IndexOutOfBoundsException: Index 1 out of bounds for length 0
+at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:100)
+at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:106)
+at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:302)
+at java.base/java.util.Objects.checkIndex(Objects.java:385)
+at java.base/java.util.ArrayList.get(ArrayList.java:427)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementListHandler.invoke(LocatingElementListHandler.java:39)
+at jdk.proxy2/jdk.proxy2.$Proxy12.get(Unknown Source)
+at sleniumframework.pageobjects.ProductsPage.productName(ProductsPage.java:68)
+at sleniumframework.pageobjects.ProductsPage.productDetails(ProductsPage.java:73)
+at sleniumframework.tests.EndToEndOrderProduct.validateProductQuantityInCart(EndToEndOrderProduct.java:134)
+at sleniumframework.tests.EndToEndOrderProduct.registerWhileCheckout(EndToEndOrderProduct.java:146)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IndexOutOfBoundsException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- registerWhileCheckout -->
+        <test-method signature="removeProductFromCart()[pri:13, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:35 CEST" name="removeProductFromCart" finished-at="2024-07-20T11:20:38 CEST" duration-ms="3397" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeProductFromCart -->
-        <test-method signature="searchProduct()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@3cce5371]" started-at="2024-07-14T22:00:32 CEST" name="searchProduct" finished-at="2024-07-14T22:00:34 CEST" duration-ms="1536" status="PASS">
+        <test-method signature="viewCategoryProducts()[pri:14, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:38 CEST" name="viewCategoryProducts" finished-at="2024-07-20T11:20:41 CEST" duration-ms="2267" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchProduct -->
-        <test-method signature="subscriptionValidation()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@3cce5371]" started-at="2024-07-14T22:00:34 CEST" name="subscriptionValidation" finished-at="2024-07-14T22:00:35 CEST" duration-ms="1774" status="PASS">
+        </test-method> <!-- viewCategoryProducts -->
+        <test-method signature="viewCartBrandProducts()[pri:15, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:41 CEST" name="viewCartBrandProducts" finished-at="2024-07-20T11:20:43 CEST" duration-ms="2113" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- subscriptionValidation -->
-        <test-method signature="validateCartProductAfterLogin()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@3cce5371]" started-at="2024-07-14T22:00:35 CEST" name="validateCartProductAfterLogin" finished-at="2024-07-14T22:00:50 CEST" duration-ms="14223" status="FAIL">
+        </test-method> <!-- viewCartBrandProducts -->
+        <test-method retried="true" signature="validateCartProductAfterLogin()[pri:16, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:43 CEST" name="validateCartProductAfterLogin" finished-at="2024-07-20T11:20:57 CEST" duration-ms="13982" status="SKIP">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"[href*='/login']"}
-  (Session info: chrome=126.0.6478.127)
+  (Session info: chrome=126.0.6478.182)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.19.1', revision: 'abe0ee07dc'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0905b097a1bb6be55280d8537ccf43f8, findElement {value=[href*='/login'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58089}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58089/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0905b097a1bb6be55280d8537ccf43f8]]>
+Command: [67b00c8e41c7ad2b73db45c2a658c6cb, findElement {value=[href*='/login'], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51865/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 67b00c8e41c7ad2b73db45c2a658c6cb]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"[href*='/login']"}
-  (Session info: chrome=126.0.6478.127)
+  (Session info: chrome=126.0.6478.182)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.19.1', revision: 'abe0ee07dc'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [0905b097a1bb6be55280d8537ccf43f8, findElement {value=[href*='/login'], using=css selector}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.127, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:58089}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:58089/devtoo..., se:cdpVersion: 126.0.6478.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0905b097a1bb6be55280d8537ccf43f8
+Command: [67b00c8e41c7ad2b73db45c2a658c6cb, findElement {value=[href*='/login'], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51865/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 67b00c8e41c7ad2b73db45c2a658c6cb
 at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
@@ -266,9 +425,9 @@ at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:3
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy9.click(Unknown Source)
+at jdk.proxy2/jdk.proxy2.$Proxy11.click(Unknown Source)
 at sleniumframework.pageobjects.LandingPage.signupLogin(LandingPage.java:149)
-at sleniumframework.tests.EndToEndOrderProduct.validateCartProductAfterLogin(EndToEndOrderProduct.java:258)
+at sleniumframework.tests.EndToEndOrderProduct.validateCartProductAfterLogin(EndToEndOrderProduct.java:257)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
@@ -305,25 +464,54 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCartProductAfterLogin -->
-        <test-method signature="validateProductQuantityInCart()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@3cce5371]" started-at="2024-07-14T22:00:50 CEST" name="validateProductQuantityInCart" finished-at="2024-07-14T22:00:52 CEST" duration-ms="2365" status="FAIL">
-          <exception class="java.lang.AssertionError">
+        <test-method retried="true" signature="validateCartProductAfterLogin()[pri:16, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:20:57 CEST" name="validateCartProductAfterLogin" finished-at="2024-07-20T11:21:12 CEST" duration-ms="15820" status="SKIP">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[expected:<4> but was:<3>]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"[href*='/login']"}
+  (Session info: chrome=126.0.6478.182)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [67b00c8e41c7ad2b73db45c2a658c6cb, findElement {value=[href*='/login'], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51865/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 67b00c8e41c7ad2b73db45c2a658c6cb]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected:<4> but was:<3>
-at org.testng.AssertJUnit.fail(AssertJUnit.java:65)
-at org.testng.AssertJUnit.failNotEquals(AssertJUnit.java:467)
-at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:88)
-at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:318)
-at org.testng.AssertJUnit.assertEquals(AssertJUnit.java:328)
-at sleniumframework.tests.EndToEndOrderProduct.validateProductQuantityInCart(EndToEndOrderProduct.java:141)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"[href*='/login']"}
+  (Session info: chrome=126.0.6478.182)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [67b00c8e41c7ad2b73db45c2a658c6cb, findElement {value=[href*='/login'], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51865/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 67b00c8e41c7ad2b73db45c2a658c6cb
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy11.click(Unknown Source)
+at sleniumframework.pageobjects.LandingPage.signupLogin(LandingPage.java:149)
+at sleniumframework.tests.EndToEndOrderProduct.validateCartProductAfterLogin(EndToEndOrderProduct.java:257)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
 at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
 at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
 at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
@@ -350,75 +538,115 @@ at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateProductQuantityInCart -->
-        <test-method signature="viewCartBrandProducts()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@3cce5371]" started-at="2024-07-14T22:00:52 CEST" name="viewCartBrandProducts" finished-at="2024-07-14T22:00:55 CEST" duration-ms="3190" status="PASS">
+        </test-method> <!-- validateCartProductAfterLogin -->
+        <test-method signature="validateCartProductAfterLogin()[pri:16, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:21:12 CEST" name="validateCartProductAfterLogin" finished-at="2024-07-20T11:21:28 CEST" duration-ms="15223" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"[href*='/login']"}
+  (Session info: chrome=126.0.6478.182)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [67b00c8e41c7ad2b73db45c2a658c6cb, findElement {value=[href*='/login'], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51865/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 67b00c8e41c7ad2b73db45c2a658c6cb]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"[href*='/login']"}
+  (Session info: chrome=126.0.6478.182)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.19.1', revision: 'abe0ee07dc'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [67b00c8e41c7ad2b73db45c2a658c6cb, findElement {value=[href*='/login'], using=css selector}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.182, chrome: {chromedriverVersion: 126.0.6478.182 (5b5d8292ddf..., userDataDir: C:\Users\Sabir\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51865}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51865/devtoo..., se:cdpVersion: 126.0.6478.182, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 67b00c8e41c7ad2b73db45c2a658c6cb
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:349)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy11.click(Unknown Source)
+at sleniumframework.pageobjects.LandingPage.signupLogin(LandingPage.java:149)
+at sleniumframework.tests.EndToEndOrderProduct.validateCartProductAfterLogin(EndToEndOrderProduct.java:257)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
+at org.testng.internal.invokers.TestInvoker.retryFailed(TestInvoker.java:269)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:76)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:739)
+at org.testng.TestRunner.run(TestRunner.java:614)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:308)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:71)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:113)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- viewCartBrandProducts -->
-        <test-method signature="viewCategoryProducts()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@3cce5371]" started-at="2024-07-14T22:00:55 CEST" name="viewCategoryProducts" finished-at="2024-07-14T22:00:58 CEST" duration-ms="2388" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- viewCategoryProducts -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@3cce5371]" started-at="2024-07-14T22:00:58 CEST" name="tearDown" finished-at="2024-07-14T22:00:58 CEST" duration-ms="221" status="PASS">
+        </test-method> <!-- validateCartProductAfterLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.EndToEndOrderProduct@2a62b5bc]" started-at="2024-07-20T11:21:28 CEST" name="tearDown" finished-at="2024-07-20T11:21:28 CEST" duration-ms="225" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- sleniumframework.tests.EndToEndOrderProduct -->
       <class name="sleniumframework.tests.PageTitleValidation">
-        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.PageTitleValidation@5f8e8a9d]" started-at="2024-07-14T21:59:06 CEST" name="landingPage" finished-at="2024-07-14T21:59:12 CEST" duration-ms="5467" status="PASS">
+        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.PageTitleValidation@7dda48d9]" started-at="2024-07-20T11:18:43 CEST" name="landingPage" finished-at="2024-07-20T11:18:50 CEST" duration-ms="7245" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- landingPage -->
-        <test-method signature="addBannerValidation()[pri:0, instance:sleniumframework.tests.PageTitleValidation@5f8e8a9d]" started-at="2024-07-14T21:59:12 CEST" name="addBannerValidation" finished-at="2024-07-14T21:59:15 CEST" duration-ms="2715" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addBannerValidation -->
-        <test-method signature="headerMenuValidation()[pri:0, instance:sleniumframework.tests.PageTitleValidation@5f8e8a9d]" started-at="2024-07-14T21:59:15 CEST" name="headerMenuValidation" finished-at="2024-07-14T21:59:19 CEST" duration-ms="4381" status="PASS">
+        <test-method signature="headerMenuValidation()[pri:23, instance:sleniumframework.tests.PageTitleValidation@7dda48d9]" started-at="2024-07-20T11:18:50 CEST" name="headerMenuValidation" finished-at="2024-07-20T11:18:55 CEST" duration-ms="4653" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- headerMenuValidation -->
-        <test-method signature="sideMenuValidation()[pri:0, instance:sleniumframework.tests.PageTitleValidation@5f8e8a9d]" started-at="2024-07-14T21:59:19 CEST" name="sideMenuValidation" finished-at="2024-07-14T21:59:28 CEST" duration-ms="9579" status="PASS">
+        <test-method signature="addBannerValidation()[pri:24, instance:sleniumframework.tests.PageTitleValidation@7dda48d9]" started-at="2024-07-20T11:18:55 CEST" name="addBannerValidation" finished-at="2024-07-20T11:18:56 CEST" duration-ms="1512" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addBannerValidation -->
+        <test-method signature="sideMenuValidation()[pri:25, instance:sleniumframework.tests.PageTitleValidation@7dda48d9]" started-at="2024-07-20T11:18:56 CEST" name="sideMenuValidation" finished-at="2024-07-20T11:19:05 CEST" duration-ms="9067" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- sideMenuValidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.PageTitleValidation@5f8e8a9d]" started-at="2024-07-14T21:59:28 CEST" name="tearDown" finished-at="2024-07-14T21:59:29 CEST" duration-ms="236" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.PageTitleValidation@7dda48d9]" started-at="2024-07-20T11:19:05 CEST" name="tearDown" finished-at="2024-07-20T11:19:06 CEST" duration-ms="203" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- sleniumframework.tests.PageTitleValidation -->
-      <class name="sleniumframework.tests.EndToEndLoginSignup">
-        <test-method is-config="true" signature="landingPage()[pri:0, instance:sleniumframework.tests.EndToEndLoginSignup@740fb309]" started-at="2024-07-14T21:58:48 CEST" name="landingPage" finished-at="2024-07-14T21:58:56 CEST" duration-ms="7680" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- landingPage -->
-        <test-method signature="deleteAccount()[pri:0, instance:sleniumframework.tests.EndToEndLoginSignup@740fb309]" started-at="2024-07-14T21:58:56 CEST" name="deleteAccount" finished-at="2024-07-14T21:58:59 CEST" duration-ms="2642" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteAccount -->
-        <test-method signature="invalidLogin()[pri:0, instance:sleniumframework.tests.EndToEndLoginSignup@740fb309]" started-at="2024-07-14T21:58:59 CEST" name="invalidLogin" finished-at="2024-07-14T21:58:59 CEST" duration-ms="726" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- invalidLogin -->
-        <test-method signature="registerWithExistingEmail()[pri:0, instance:sleniumframework.tests.EndToEndLoginSignup@740fb309]" started-at="2024-07-14T21:58:59 CEST" name="registerWithExistingEmail" finished-at="2024-07-14T21:59:00 CEST" duration-ms="710" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- registerWithExistingEmail -->
-        <test-method signature="signupFlow()[pri:0, instance:sleniumframework.tests.EndToEndLoginSignup@740fb309]" started-at="2024-07-14T21:59:00 CEST" name="signupFlow" finished-at="2024-07-14T21:59:04 CEST" duration-ms="4046" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signupFlow -->
-        <test-method signature="validLogin()[pri:0, instance:sleniumframework.tests.EndToEndLoginSignup@740fb309]" started-at="2024-07-14T21:59:04 CEST" name="validLogin" finished-at="2024-07-14T21:59:06 CEST" duration-ms="2080" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:sleniumframework.tests.EndToEndLoginSignup@740fb309]" started-at="2024-07-14T21:59:06 CEST" name="tearDown" finished-at="2024-07-14T21:59:06 CEST" duration-ms="216" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- sleniumframework.tests.EndToEndLoginSignup -->
-    </test> <!-- regression -->
-  </suite> <!-- Regression -->
+    </test> <!-- Smoke Test -->
+  </suite> <!-- Smoke -->
 </testng-results>

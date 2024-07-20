@@ -5,12 +5,9 @@
     <classes>
       <class name="sleniumframework.tests.EndToEndOrderProduct">
         <methods>
-          <include name="cartProductFromRecommendedItems"/>
-          <include name="registerWhileCheckout"/>
+          <include name="removeProductFromCart"/>
           <include name="tearDown"/>
           <include name="landingPage"/>
-          <include name="validateProductQuantityInCart"/>
-          <include name="validateCartProductAfterLogin"/>
         </methods>
       </class> <!-- sleniumframework.tests.EndToEndOrderProduct -->
     </classes>

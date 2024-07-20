@@ -1,8 +1,6 @@
 package sleniumframework.tests;
 
-import org.testng.annotations.Test;
 import org.testng.AssertJUnit;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import sleniumframework.pageobjects.SignupLoginPage;
@@ -14,7 +12,7 @@ public class EndToEndLoginSignup extends BaseTest {
 	String password = "Test@143";
 	String username = "Test Engineer";
 	//Test Case 1: Register User
-	@Test
+	@Test(priority = 2)
 	public void signupFlow() {
 		String signuptitle = landingPage.signupLogin();
 		AssertJUnit.assertEquals(signuptitle, "Automation Exercise - Signup / Login");
@@ -49,7 +47,7 @@ public class EndToEndLoginSignup extends BaseTest {
 		//Assert.assertEquals(confirmText, "ACCOUNT DELETED!"); -> at last
 	}
 	//Test Case 2: Login User with correct email and password
-	@Test
+	@Test(priority = 3)
 	public void validLogin() {
 		landingPage.signupLogin();
 		signupLogin = new SignupLoginPage(driver);
@@ -61,7 +59,7 @@ public class EndToEndLoginSignup extends BaseTest {
 		signupLogin.logout();
 	}
 	//Test Case 3: Login User with incorrect email and password
-	@Test
+	@Test(priority = 4)
 	public void invalidLogin() {
 		landingPage.signupLogin();
 		signupLogin = new SignupLoginPage(driver);
@@ -72,7 +70,7 @@ public class EndToEndLoginSignup extends BaseTest {
 		AssertJUnit.assertEquals(errorText, "Your email or password is incorrect!");
 	}
 	//Test Case 5: Register User with existing email
-	@Test
+	@Test(priority = 5)
 	public void registerWithExistingEmail() {
 		landingPage.signupLogin();
 		signupLogin = new SignupLoginPage(driver);
@@ -83,7 +81,7 @@ public class EndToEndLoginSignup extends BaseTest {
 		AssertJUnit.assertEquals(actualError, "Email Address already exist!");		
 	}
 	//Delete Account
-	@Test
+	@Test(priority = 6)
 	public void deleteAccount() {
 		landingPage.signupLogin();
 		signupLogin = new SignupLoginPage(driver);

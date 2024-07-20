@@ -1,12 +1,12 @@
-sleniumframework\testcomponents\BaseTest2.class
+sleniumframework\tests\DatabaseTesting.class
 sleniumframework\testcomponents\BaseTest$1.class
 sleniumframework\testcomponents\BaseTest.class
 sleniumframework\tests\EndToEndLoginSignup.class
 sleniumframework\tests\EndToEndOrderProduct.class
+sleniumframework\testcomponents\BaseTest_remote$1.class
 sleniumframework\testcomponents\Listeners.class
 sleniumframework\testcomponents\Retry.class
 sleniumframework\tests\contactUsFormValidation.class
 sleniumframework\tests\PageTitleValidation.class
-sleniumframework\testcomponents\AllureListener.class
-sleniumframework\testcomponents\BaseTest2$1.class
+sleniumframework\testcomponents\BaseTest_remote.class
 sleniumframework\tests\EndToEndTest.class

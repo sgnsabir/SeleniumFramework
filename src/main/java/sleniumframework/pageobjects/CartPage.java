@@ -18,6 +18,9 @@ public class CartPage  extends AbstractComponent{
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
+
+
+	By productsBy = By.cssSelector("[href*='product_details']");
 	
 	@FindBy(css="[href*='product_details']")
 	private List<WebElement> productName;
@@ -58,6 +61,7 @@ public class CartPage  extends AbstractComponent{
 	
 	public void removeFromCart(int index) {
 		removeFromCartButton.get(index).click();
+		//waitForElementToAppear(productsBy);
 	}
 	
 	public int cartProductCount() {
@@ -67,8 +71,6 @@ public class CartPage  extends AbstractComponent{
 	public String customerName() {
 		return name.getText();
 	}
-	
-	By productsBy = By.cssSelector("[href*='product_details']");
 	
 	public String productName(int index) {
 		return productName.get(index).getText();

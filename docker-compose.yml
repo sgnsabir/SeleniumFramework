@@ -9,6 +9,10 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_MAX_SESSIONS=5
+      - SE_NODE_CLEAN_UP_CRASHED_SESSIONS=true
+    ports:
+      - "5900" # Optional, for VNC if we need to debug
 
   firefox:
     image: selenium/node-firefox:latest
@@ -19,6 +23,10 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_MAX_SESSIONS=5
+      - SE_NODE_CLEAN_UP_CRASHED_SESSIONS=true
+    ports:
+      - "5901" # Optional, for VNC if we need to debug
       
   edge:
     image: selenium/node-edge:latest
@@ -29,6 +37,10 @@ services:
       - SE_EVENT_BUS_HOST=selenium-hub
       - SE_EVENT_BUS_PUBLISH_PORT=4442
       - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_MAX_SESSIONS=5
+      - SE_NODE_CLEAN_UP_CRASHED_SESSIONS=true
+    ports:
+      - "5902" # Optional, for VNC if we need to debug
 
   selenium-hub:
     image: selenium/hub:latest
@@ -37,3 +49,9 @@ services:
       - "4442:4442"
       - "4443:4443"
       - "4444:4444"
+    environment:
+      - GRID_MAX_SESSION=10
+      - GRID_BROWSER_TIMEOUT=60
+      - GRID_NODE_POLLING=5000
+    # Optional: To set restart policy to ensure it restarts automatically on failure
+    restart: always

@@ -20,7 +20,7 @@ public class PageTitleValidation extends BaseTest {
 	String filePath = System.getProperty("user.dir") + "\\test_file.pdf";
 
 	// Test Case 6: Contact Us Form
-	@Test
+	@Test(priority = 23)
 	public void headerMenuValidation() {
 		AssertJUnit.assertEquals(landingPage.home(), "Automation Exercise");
 		AssertJUnit.assertEquals(landingPage.products(), "Automation Exercise - All Products");
@@ -32,7 +32,7 @@ public class PageTitleValidation extends BaseTest {
 		AssertJUnit.assertEquals(landingPage.contactUs(), "Automation Exercise - Contact Us");
 	}
 
-	@Test
+	@Test(priority = 24)
 	public void addBannerValidation() {
 		landingPage.home();
 		BannerPage banner = new BannerPage(driver);
@@ -46,7 +46,7 @@ public class PageTitleValidation extends BaseTest {
 		AssertJUnit.assertEquals(banner.carouselCardTitle(), "AutomationExercise");
 	}
 
-	@Test
+	@Test(priority = 25)
 	public void sideMenuValidation() {
 		landingPage.home();
 		AssertJUnit.assertEquals(landingPage.categorySideBarTitle(), "CATEGORY");

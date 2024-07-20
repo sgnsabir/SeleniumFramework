@@ -1,8 +1,7 @@
 package sleniumframework.tests;
 
-import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
 import org.testng.Assert;
+import org.testng.AssertJUnit;
 import org.testng.annotations.Test;
 
 import sleniumframework.pageobjects.CartPage;
@@ -26,7 +25,7 @@ public class EndToEndOrderProduct extends BaseTest {
 	String filePath = System.getProperty("user.dir") + "\\test_file.pdf";
 
 	//Purchase flow through Product Details
-	@Test
+	@Test(priority = 7)
 	public void productOrderThroughProductDetails() throws InterruptedException {
 		String prductsPageTitle = landingPage.products();
 		AssertJUnit.assertEquals(prductsPageTitle, "Automation Exercise - All Products");
@@ -84,7 +83,7 @@ public class EndToEndOrderProduct extends BaseTest {
 		payment.continueShopping().equals("Automation Exercise");
 	}
 	//Test Case 9: Search Product
-	@Test
+	@Test(priority = 8)
 	public void searchProduct() {
 	landingPage.products();
 	productPage = new ProductsPage(driver);
@@ -92,7 +91,7 @@ public class EndToEndOrderProduct extends BaseTest {
 	}
 	
 	//Test Case 10: Verify Subscription in home page
-	@Test
+	@Test(priority = 9)
 	public void subscriptionValidation() throws InterruptedException {
 		landingPage.home();
 		footer = new FooterPage(driver);
@@ -107,7 +106,7 @@ public class EndToEndOrderProduct extends BaseTest {
 	}
 	
 	//Test Case 12: Add Products in Cart
-	@Test
+	@Test(priority = 10)
 	public void addProductInCart() {
 		landingPage.home();
 		productPage = new ProductsPage(driver);
@@ -129,7 +128,7 @@ public class EndToEndOrderProduct extends BaseTest {
 	}
 	
 	//Test Case 13: Verify Product quantity in Cart
-	@Test
+	@Test(priority = 11)
 	public void validateProductQuantityInCart(){
 		productPage = new ProductsPage(driver);
 		productPage.productDetails(1);
@@ -142,7 +141,7 @@ public class EndToEndOrderProduct extends BaseTest {
 	}
 	
 	//Test Case 14: Place Order: Register while Checkout
-	@Test
+	@Test(priority = 12)
 	public void registerWhileCheckout() throws InterruptedException {
 		validateProductQuantityInCart();
 		//cart = new CartPage(driver);
@@ -197,7 +196,7 @@ public class EndToEndOrderProduct extends BaseTest {
 	}
 	
 	//Test Case 17: Remove Products From Cart
-	@Test
+	@Test(priority = 13)
 	public void removeProductFromCart() throws InterruptedException {
 		landingPage.home();
 		productPage = new ProductsPage(driver);
@@ -217,7 +216,7 @@ public class EndToEndOrderProduct extends BaseTest {
 	}
 	
 	//Test Case 18: View Category Products
-	@Test
+	@Test(priority = 14)
 	public void viewCategoryProducts() {
 		landingPage.home();
 		AssertJUnit.assertEquals(landingPage.categorySideBarTitle(), "CATEGORY");
@@ -234,7 +233,7 @@ public class EndToEndOrderProduct extends BaseTest {
 	}
 	
 	//Test Case 19: View & Cart Brand Products
-	@Test
+	@Test(priority = 15)
 	public void viewCartBrandProducts() {
 		landingPage.home();
 		landingPage.products();
@@ -244,7 +243,7 @@ public class EndToEndOrderProduct extends BaseTest {
 		Assert.assertTrue(landingPage.productVisibility());
 	}
 	//Test Case 20: Search Products and Verify Cart After Login
-	@Test
+	@Test(priority = 16)
 	public void validateCartProductAfterLogin() {
 		landingPage.home();
 		landingPage.products();

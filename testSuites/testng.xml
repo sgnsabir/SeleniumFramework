@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!--DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" -->
 <suite name="Regression">
-	<test thread-count="5" name="regression">
+	<listeners>
+		<listener class-name="sleniumframework.testcomponents.Listeners" />
+	</listeners>
+
+	<test thread-count="5" name="Regression Test">
 		<classes>
 			<class name="sleniumframework.tests.EndToEndLoginSignup" />
 			<class name="sleniumframework.tests.PageTitleValidation" />

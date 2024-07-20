@@ -1,9 +1,9 @@
-C:\Users\Sabir\eclipse-workspace\sleniumframework\src\test\java\sleniumframework\testcomponents\AllureListener.java
 C:\Users\Sabir\eclipse-workspace\sleniumframework\src\test\java\sleniumframework\testcomponents\BaseTest.java
-C:\Users\Sabir\eclipse-workspace\sleniumframework\src\test\java\sleniumframework\testcomponents\BaseTest2.java
+C:\Users\Sabir\eclipse-workspace\sleniumframework\src\test\java\sleniumframework\testcomponents\BaseTest_remote.java
 C:\Users\Sabir\eclipse-workspace\sleniumframework\src\test\java\sleniumframework\testcomponents\Listeners.java
 C:\Users\Sabir\eclipse-workspace\sleniumframework\src\test\java\sleniumframework\testcomponents\Retry.java
 C:\Users\Sabir\eclipse-workspace\sleniumframework\src\test\java\sleniumframework\tests\contactUsFormValidation.java
+C:\Users\Sabir\eclipse-workspace\sleniumframework\src\test\java\sleniumframework\tests\DatabaseTesting.java
 C:\Users\Sabir\eclipse-workspace\sleniumframework\src\test\java\sleniumframework\tests\EndToEndLoginSignup.java
 C:\Users\Sabir\eclipse-workspace\sleniumframework\src\test\java\sleniumframework\tests\EndToEndOrderProduct.java
 C:\Users\Sabir\eclipse-workspace\sleniumframework\src\test\java\sleniumframework\tests\EndToEndTest.java
