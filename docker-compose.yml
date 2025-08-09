@@ -1,57 +1,82 @@
-version: "3"
 services:
-  chrome:
-    image: selenium/node-chrome:latest
-    shm_size: 2gb
-    depends_on:
-      - selenium-hub
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_NODE_MAX_SESSIONS=5
-      - SE_NODE_CLEAN_UP_CRASHED_SESSIONS=true
-    ports:
-      - "5900" # Optional, for VNC if we need to debug
-
-  firefox:
-    image: selenium/node-firefox:latest
-    shm_size: 2gb
-    depends_on:
-      - selenium-hub
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_NODE_MAX_SESSIONS=5
-      - SE_NODE_CLEAN_UP_CRASHED_SESSIONS=true
-    ports:
-      - "5901" # Optional, for VNC if we need to debug
-      
-  edge:
-    image: selenium/node-edge:latest
-    shm_size: 2gb
-    depends_on:
-      - selenium-hub
-    environment:
-      - SE_EVENT_BUS_HOST=selenium-hub
-      - SE_EVENT_BUS_PUBLISH_PORT=4442
-      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
-      - SE_NODE_MAX_SESSIONS=5
-      - SE_NODE_CLEAN_UP_CRASHED_SESSIONS=true
-    ports:
-      - "5902" # Optional, for VNC if we need to debug
-
-  selenium-hub:
-    image: selenium/hub:latest
+  hub:
+    image: selenium/hub:4.32.0
     container_name: selenium-hub
     ports:
       - "4442:4442"
       - "4443:4443"
       - "4444:4444"
     environment:
-      - GRID_MAX_SESSION=10
-      - GRID_BROWSER_TIMEOUT=60
-      - GRID_NODE_POLLING=5000
-    # Optional: To set restart policy to ensure it restarts automatically on failure
-    restart: always
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_SESSION_QUEUE_TIMEOUT=300
+      - SE_SESSION_REQUEST_TIMEOUT=300
+      - SE_NODE_SESSION_TIMEOUT=300
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4444/status"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    networks:
+      - selenium-network
+
+  chrome:
+    image: selenium/node-chrome:4.32.0
+    container_name: selenium-node-chrome
+    depends_on:
+      hub:
+        condition: service_healthy
+    environment:
+      - SE_EVENT_BUS_HOST=selenium-hub
+      - SE_EVENT_BUS_PUBLISH_PORT=4442
+      - SE_EVENT_BUS_SUBSCRIBE_PORT=4443
+      - SE_NODE_GRID_URL=http://selenium-hub:4444
+      - SE_NODE_MAX_SESSIONS=4
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+      - SE_VNC_NO_PASSWORD=1
+    volumes:
+      - /dev/shm:/dev/shm
+    shm_size: 2gb
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5555/status"]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 30s
+    networks:
+      - selenium-network
+
+  test-runner:
+    build: .
+    container_name: test-runner
+    depends_on:
+      hub:
+        condition: service_healthy
+      chrome:
+        condition: service_healthy
+    environment:
+      - SE_NODE_GRID_URL=http://selenium-hub:4444/wd/hub
+      - BROWSER=chrome
+      - HUB_HOST=selenium-hub
+      - HUB_PORT=4444
+      - THREAD_COUNT=2
+      - TEST_SUITE=testng
+      - IS_DOCKER=true
+      - REMOTE_EXECUTION=true
+      - JAVA_OPTS=-XX:+UseContainerSupport -XX:MaxRAMPercentage=80.0
+      - MAVEN_OPTS=-Dmaven.repo.local=/app/.m2/repository
+    volumes:
+      - ./target:/app/target
+      - ./testSuites:/app/testSuites
+      - m2-repo:/app/.m2/repository
+    networks:
+      - selenium-network
+
+networks:
+  selenium-network:
+    driver: bridge
+
+volumes:
+  m2-repo:

@@ -1,206 +1,159 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>automation</groupId>
-	<artifactId>sleniumframework</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>selenium-framework</artifactId>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>sleniumframework</name>
-	<url>http://maven.apache.org</url>
+	<name>Selenium Automation Framework</name>
+	<url>https://github.com/your-repo/selenium-framework</url>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven.compiler.source>21</maven.compiler.source>
-		<maven.compiler.target>21</maven.compiler.target>
+		<java.version>21</java.version>
+		<aspectj.version>1.9.22.1</aspectj.version>
+		<allure.version>2.28.0</allure.version>
+		<selenium.version>4.34.0</selenium.version>
+		<testng.version>7.10.2</testng.version>
+		<webdrivermanager.version>5.8.0</webdrivermanager.version>
+		<maven.surefire.version>3.2.5</maven.surefire.version>
+
+		<!-- Default execution properties -->
+		<test.suite>testng</test.suite>
+		<browser>chrome</browser>
+		<thread.count>1</thread.count>
+		<selenium.grid.url>http://localhost:4444</selenium.grid.url>
+		<allure.results.directory>${project.build.directory}/target/allure-results</allure.results.directory>
 	</properties>
-	<!-- allure serve allure-results -/-clean -o allure-report -->
-	<!-- pull selenium/standalone-chrome -->
-	<!-- docker run -d -p 4444:4444 -v /dev/shm:/dev/shm
-	selenium/standalone-chrome -->
-	<!-- docker-compose -f docker-compose.yml up -d -->
-	<!-- docker-compose up -d -/-scale chrome=4 -->
-	<!-- http://localhost:4444/ -->
+
 	<dependencies>
-
-		<!--
-		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-		<dependency>
-			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
-			<version>4.22.0</version>
-		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<!-- Core Testing -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>7.10.2</version>
+			<version>${testng.version}</version>
+			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+		<!-- Selenium -->
 		<dependency>
-			<groupId>com.mysql</groupId>
-			<artifactId>mysql-connector-j</artifactId>
-			<version>9.0.0</version>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.version}</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
-		<dependency>
-			<groupId>io.qameta.allure</groupId>
-			<artifactId>allure-testng</artifactId>
-			<version>2.28.0</version>
-		</dependency>
-
-		<!--
-		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+		<!-- WebDriver Management -->
 		<dependency>
 			<groupId>io.github.bonigarcia</groupId>
 			<artifactId>webdrivermanager</artifactId>
-			<version>5.8.0</version>
+			<version>${webdrivermanager.version}</version>
 		</dependency>
 
-		<!--
-		https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+		<!-- Allure Reporting -->
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>2.17.1</version>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>${allure.version}</version>
+			<scope>test</scope>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 		<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
-			<version>5.1.1</version>
+			<version>5.1.2</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
+		<!-- JSON Handling -->
 		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-java</artifactId>
-			<version>7.17.0</version>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-databind</artifactId>
+			<version>2.17.1</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+		<!-- Logging -->
 		<dependency>
-			<groupId>io.cucumber</groupId>
-			<artifactId>cucumber-testng</artifactId>
-			<version>7.17.0</version>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>2.0.9</version>
 		</dependency>
-
-
 	</dependencies>
 
-	<profiles>
-
-
-		<profile>
-			<id>Regression</id>
-			<build>
-				<pluginManagement><!-- lock down plugins versions to avoid using
-					Maven defaults (may be moved to parent pom) -->
-					<plugins>
-						<!-- clean lifecycle, see
-						https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
-						<plugin>
-							<groupId>org.apache.maven.plugins</groupId>
-							<artifactId>maven-surefire-plugin</artifactId>
-							<version>3.2.5</version>
-							<configuration> 
-								<suiteXmlFiles>
-									<suiteXmlFile>testSuites/Regression.xml</suiteXmlFile>
-								</suiteXmlFiles>
-							</configuration>
-						</plugin>
-					</plugins>
-				</pluginManagement>
-			</build>
-
-		</profile>
-
-		<profile>
-			<id>Smoke</id>
-			<build>
-				<pluginManagement><!-- lock down plugins versions to avoid using
-					Maven defaults (may be moved to parent pom) -->
-					<plugins>
-						<!-- clean lifecycle, see
-						https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
-						<plugin>
-							<groupId>org.apache.maven.plugins</groupId>
-							<artifactId>maven-surefire-plugin</artifactId>
-							<version>3.2.5</version>
-							<configuration> 
-								<suiteXmlFiles>
-									<suiteXmlFile>testSuites/Smoke.xml</suiteXmlFile>
-								</suiteXmlFiles>
-							</configuration>
-						</plugin>
-					</plugins>
-				</pluginManagement>
-			</build>
-		</profile>
-	</profiles>
-
-
 	<build>
-		<pluginManagement><!-- lock down plugins versions to avoid using Maven
-			defaults (may be moved to parent pom) -->
-			<plugins>
-				<!-- clean lifecycle, see
-				https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.3.0</version>
-					<configuration>
-						<suiteXmlFiles>
-							<suiteXmlFile>testSuites/testng.xml</suiteXmlFile>
-						</suiteXmlFiles>
-					</configuration>
-				</plugin>
+		<plugins>
+			<!-- Compiler Plugin -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.13.0</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
 
-				<plugin>
-					<artifactId>maven-clean-plugin</artifactId>
-					<version>3.4.0</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-resources-plugin</artifactId>
-					<version>3.0.2</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.13.0</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-jar-plugin</artifactId>
-					<version>3.0.2</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-install-plugin</artifactId>
-					<version>3.1.1</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-deploy-plugin</artifactId>
-					<version>2.8.2</version>
-				</plugin>
-				<!-- site lifecycle, see
-				https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
-				<plugin>
-					<artifactId>maven-site-plugin</artifactId>
-					<version>3.12.1</version>
-				</plugin>
-				<plugin>
-					<artifactId>maven-project-info-reports-plugin</artifactId>
-					<version>3.0.0</version>
-				</plugin>
+			<!-- Surefire Test Runner -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven.surefire.version}</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>testSuites/${test.suite}.xml</suiteXmlFile>
+					</suiteXmlFiles>
+					<argLine>
+						-javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
+					</argLine>
+					<systemPropertyVariables>
+						<allure.results.directory>${allure.results.directory}</allure.results.directory>
+						<browser>${browser}</browser>
+						<thread.count>${thread.count}</thread.count>
+						<selenium.grid.url>${selenium.grid.url}</selenium.grid.url>
+					</systemPropertyVariables>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.aspectj</groupId>
+						<artifactId>aspectjweaver</artifactId>
+						<version>${aspectj.version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
 
-			</plugins>
-		</pluginManagement>
+			<!-- Allure Report Integration -->
+			<plugin>
+				<groupId>io.qameta.allure</groupId>
+				<artifactId>allure-maven</artifactId>
+				<version>2.12.0</version>
+				<configuration>
+					<reportVersion>${allure.version}</reportVersion>
+					<resultsDirectory>${allure.results.directory}</resultsDirectory>
+					<reportDirectory>${project.build.directory}/allure-report</reportDirectory>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 
+	<profiles>
+		<profile>
+			<id>docker</id>
+			<properties>
+				<selenium.grid.url>http://selenium-hub:4444</selenium.grid.url>
+				<browser>chrome</browser>
+				<thread.count>1</thread.count>
+			</properties>
+		</profile>
 
+		<profile>
+			<id>ci</id>
+			<properties>
+				<thread.count>4</thread.count>
+				<browser>firefox</browser>
+			</properties>
+		</profile>
+	</profiles>
 </project>

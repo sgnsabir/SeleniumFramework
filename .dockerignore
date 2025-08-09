@@ -1,0 +1,14 @@
+# Ignore everything
+downloads/
+reports/
+.git
+.gitignore
+*.md
+*.iml
+.idea/
+.vscode/
+target/
+.classpath
+.project
+.settings/
+*.log

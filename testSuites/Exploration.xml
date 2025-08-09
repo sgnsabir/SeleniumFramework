@@ -2,11 +2,11 @@
 <!--DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" -->
 <suite name="Exploration">
 	<listeners>
-        <listener class-name="sleniumframework.testcomponents.Listeners"/>
+        <listener class-name="seleniumFramework.utils.Listeners"/>
     </listeners>
 	<test thread-count="5" name="PageTitles">
 		<classes>
-			<class name="sleniumframework.tests.PageTitleValidation" />
+			<class name="seleniumFramework.tests.PageTitleValidation" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

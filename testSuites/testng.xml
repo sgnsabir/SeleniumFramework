@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" -->
-<suite name="Regression">
-	<listeners>
-		<listener class-name="sleniumframework.testcomponents.Listeners" />
-	</listeners>
+<suite name="Regression" parallel="tests" thread-count="5">
+    <listeners>
+        <listener class-name="seleniumFramework.utils.Listeners" />
+    </listeners>
 
-	<test thread-count="5" name="Regression Test">
-		<classes>
-			<class name="sleniumframework.tests.EndToEndLoginSignup" />
-			<class name="sleniumframework.tests.PageTitleValidation" />
-			<class name="sleniumframework.tests.contactUsFormValidation" />
-			<class name="sleniumframework.tests.EndToEndTest" />
-			<class name="sleniumframework.tests.EndToEndOrderProduct" />
-		</classes>
-	</test> <!-- Test -->
-</suite> <!-- Suite -->
+    <test name="Chrome Tests">
+        <parameter name="browser" value="chrome" />
+        <parameter name="remote" value="true" />
+        <parameter name="remoteUrl" value="http://selenium-hub:4444/wd/hub" />
+        <classes>
+            <class name="seleniumFramework.tests.EndToEndLoginSignup" />
+            <class name="seleniumFramework.tests.PageTitleValidation" />
+            <class name="seleniumFramework.tests.contactUsFormValidation" />
+            <class name="seleniumFramework.tests.EndToEndTest" />
+            <class name="seleniumFramework.tests.EndToEndOrderProduct" />
+        </classes>
+    </test>
+
+    <!-- Additional test configurations for other browsers can be added here -->
+</suite>
